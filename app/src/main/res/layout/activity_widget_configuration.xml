@@ -15,32 +15,34 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:ignore="DeprecatedWidgetInXml">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/white"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/almostBlackDark"
             android:fontFamily="sans-serif-medium"
-            android:textStyle="normal"
+            android:text="@string/widgetConfigurationTitleText"
+            android:textColor="@color/almostBlackDark"
             android:textSize="20sp"
-            android:text="@string/widgetConfigurationTitleText" />
+            android:textStyle="normal" />
 
         <ImageView
             android:id="@+id/widgetConfigPreview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
             android:src="@drawable/search_favorites_widget_light_preview" />
 
         <RadioGroup
@@ -53,33 +55,33 @@
                 android:id="@+id/widgetConfigThemeSystem"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:textColor="@color/almostBlackDark"
                 android:fontFamily="sans-serif-medium"
-                android:textStyle="normal"
-                android:visibility="gone"
+                android:text="@string/widgetConfigurationSystemThemeOption"
+                android:textColor="@color/almostBlackDark"
                 android:textSize="16sp"
-                android:text="@string/widgetConfigurationSystemThemeOption" />
+                android:textStyle="normal"
+                android:visibility="gone" />
 
             <RadioButton
                 android:id="@+id/widgetConfigThemeLight"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:textColor="@color/almostBlackDark"
-                android:fontFamily="sans-serif-medium"
-                android:textStyle="normal"
-                android:textSize="16sp"
                 android:checked="true"
-                android:text="@string/widgetConfigurationLightThemeOption" />
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/widgetConfigurationLightThemeOption"
+                android:textColor="@color/almostBlackDark"
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <RadioButton
                 android:id="@+id/widgetConfigThemeDark"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:textColor="@color/almostBlackDark"
                 android:fontFamily="sans-serif-medium"
-                android:textStyle="normal"
+                android:text="@string/widgetConfigurationDarkThemeOption"
+                android:textColor="@color/almostBlackDark"
                 android:textSize="16sp"
-                android:text="@string/widgetConfigurationDarkThemeOption" />
+                android:textStyle="normal" />
         </RadioGroup>
 
         <com.duckduckgo.mobile.android.ui.view.button.DaxButtonPrimary
